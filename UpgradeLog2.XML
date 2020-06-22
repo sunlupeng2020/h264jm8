@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="编码">
+</Property><Property Name="解决方案文件" Value="E:\资料\BCH\前期资料\程序\jm86\JM\编码.sln">
+</Property><Property Name="用户选项文件" Value="E:\资料\BCH\前期资料\程序\jm86\JM\编码.suo">
+</Property><Property Name="Date" Value="2011年10月18日">
+</Property><Property Name="Time" Value="9:52">
+</Property><Property Name="日志号" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="编码.sln" Description="文件已成功备份为 E:\资料\BCH\前期资料\程序\jm86\JM\编码.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="编码.suo" Description="文件已成功备份为 E:\资料\BCH\前期资料\程序\jm86\JM\编码.suo.old">
+</Event><Event ErrorLevel="0" Project="lencod" Source="lencod.vcproj" Description="Converting project file 'E:\资料\BCH\前期资料\程序\jm86\JM\lencod.vcproj'.">
+</Event><Event ErrorLevel="1" Project="lencod" Source="lencod.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="lencod" Source="lencod.vcproj" Description="MSB8012: $(TargetPath) ('E:\资料\BCH\前期资料\程序\jm86\JM\.\lencod/Debug\lencod.exe') does not match the Linker's OutputFile property value './bin/lencod.exe' ('E:\资料\BCH\前期资料\程序\jm86\JM\./bin/lencod.exe') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="1" Project="lencod" Source="lencod.vcproj" Description="MSB8012: $(TargetPath) ('E:\资料\BCH\前期资料\程序\jm86\JM\.\lencod\Release\lencod.exe') does not match the Linker's OutputFile property value './bin/lencod.exe' ('E:\资料\BCH\前期资料\程序\jm86\JM\./bin/lencod.exe') in project configuration 'Release|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="lencod" Source="lencod.vcproj" Description="Done converting to new project file 'E:\资料\BCH\前期资料\程序\jm86\JM\lencod.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="lencod" Source="lencod.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="编码.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="编码.sln" Description="Converted">
+</Event></UpgradeLog>
