@@ -1,1 +1,3 @@
-﻿  FindNALContent.vcxproj -> E:\0H264\h264_recode\bin\Debug\FindNALContent.exe
+﻿  stdafx.cpp
+  FindNALContent.cpp
+  FindNALContent.vcxproj -> E:\github\h264jm8\bin\Debug\FindNALContent.exe

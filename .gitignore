@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+*\bin\*.*
+
+*.sln
+*.suo
+*.sdf
+*.sln.old
+*.ncb
+*.vcproj
+*.user
+*.dsw
+*\Debug\*.*
+*.opensdf

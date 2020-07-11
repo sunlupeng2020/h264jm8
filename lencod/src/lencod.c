@@ -120,13 +120,10 @@ void embeddedcode()//把嵌入的数据写入到数组中，每个数组元素对应嵌入数据的一位，2
 			emb01code[k] = (emb_byte & emb_mode) ? 1 : 0;
 		}
 	}
-	//for(i=0;i<10;i++)
-	//	for(k=0;k<99;k++)
-	//		for(j=0;j<4;j++)
-	//			for(m=0;m<4;m++)
-	//				embinfo[i][j][k][m]=0;
 }
 #endif
+
+
 int main(int argc,char **argv)
 {
 
@@ -134,12 +131,6 @@ int main(int argc,char **argv)
 #ifdef EMBEDDED
   int i;
 	embeddedcode();//处理嵌入数据，将嵌入数据逐位放入数组
-	/*for(i=0;i<32;i++)
-	{
-		printf("%d ",emb01code[i]);
-	}
-	printf("\n");
-	getchar();*/
 #endif  
   p_dec = p_stat = p_log = p_trace = NULL;
 
@@ -897,8 +888,7 @@ void report()
     fprintf(stdout," Output File Format                : not supported\n");
     break;
   }
-
-
+  
 
   fprintf(stdout,"------------------ Average data all frames  -----------------------------------\n");
   fprintf(stdout," SNR Y(dB)                         : %5.2f\n",snr->snr_ya);

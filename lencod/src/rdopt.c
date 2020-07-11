@@ -460,7 +460,7 @@ int Mode_Decision_for_4x4IntraBlocks (int  b8,  int  b4,  double  lambda,  int* 
   //}
 //#endif
 
-  //===== LOOP OVER ALL 4x4 INTRA PREDICTION MODES =====
+  //===== LOOP OVER ALL 4x4 INTRA PREDICTION MODES 得到4x4块的最佳帧内预测模式=====
   for (ipmode=0; ipmode<NO_INTRA_PMODE; ipmode++)
   {
 	  //if(ipmode!=4)continue;
@@ -2414,7 +2414,7 @@ int field_flag_inference()
       
       // precompute all new chroma intra prediction modes
       IntraChromaPrediction8x8(&mb_available_up, &mb_available_left, &mb_available_up_left);
-      
+      //颜色预测模式计算
       for (currMB->c_ipred_mode=DC_PRED_8; currMB->c_ipred_mode<=PLANE_8; currMB->c_ipred_mode++)
       {
         

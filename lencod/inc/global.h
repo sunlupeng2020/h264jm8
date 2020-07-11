@@ -1158,7 +1158,7 @@ void encode_one_macroblock (void);
 #include "context_ini.h"
 
 //用于嵌入数据的相关变量、常量
-#define EMBEDDED 0//是否嵌入信息的标志
+//#define EMBEDDED 0//是否嵌入信息的标志
 
 /*extern   char emb_byte;//取一个字节，括号中算出是第几个字节
 extern    int emb_bit;//从右往左第几位？

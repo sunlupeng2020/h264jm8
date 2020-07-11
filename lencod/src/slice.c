@@ -197,6 +197,9 @@ int encode_one_slice (int SliceGroupId, Picture *pic)
   int len;
   int NumberOfCodedMBs = 0;
   int CurrentMbAddr;
+  ///////
+  	  int i,j;
+//////
   double FrameRDCost, FieldRDCost;
 
   img->cod_counter = 0;
@@ -264,13 +267,32 @@ int encode_one_slice (int SliceGroupId, Picture *pic)
       
       start_macroblock (CurrentMbAddr, FALSE);
       encode_one_macroblock ();
+	  //在此处修改帧内预测模式？
+	  //读取第一帧第一个宏块的各4x4子块的预测模式
+	  if(img->current_mb_nr>30)
+	  {
+		  getchar();
+		  exit(0);
+
+	  }
+	  printf("宏块号：%d，块类型：mb_type:%d\n",img->current_mb_nr,img->mb_data[img->current_mb_nr].mb_type);
+	  for(i=0;i<4;i++)
+	  {
+		  for(j=0;j<4;j++)
+		  {
+			  printf("%d,%d,%d\t",i,j,img->mb_data[img->current_mb_nr].intra_pred_modes[i*4+j]);
+		  }
+	  }
+	  putchar('\n');
+
+
       write_one_macroblock (1);
       terminate_macroblock (&end_of_slice, &recode_macroblock);
-
-// printf ("encode_one_slice: mb %d,  slice %d,   bitbuf bytepos %d EOS %d\n", 
-//       img->current_mb_nr, img->current_slice_nr, 
-//       img->currentSlice->partArr[0].bitstream->byte_pos, end_of_slice);
-
+////////////
+ //printf ("encode_one_slice: mb %d,  slice %d,   bitbuf bytepos %d EOS %d\n", 
+ //      img->current_mb_nr, img->current_slice_nr, 
+ //      img->currentSlice->partArr[0].bitstream->byte_pos, end_of_slice);
+///////////////
       if (recode_macroblock == FALSE)       // The final processing of the macroblock has been done
       {
         CurrentMbAddr = FmoGetNextMBNr (CurrentMbAddr);
