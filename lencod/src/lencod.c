@@ -229,7 +229,6 @@ int main(int argc,char **argv)
         img->delta_pic_order_cnt[0]=+2 * input->successive_Bframe;
       }
     }
-
     SetImgType();
 
 #ifdef _ADAPT_LAST_GROUP_
@@ -530,8 +529,6 @@ void CAVLC_init()
     for (k=0;k<4;k++)
       for (l=0;l<6;l++)
         img->nz_coeff[i][k][l]=-1;
-
-
 }
 
 

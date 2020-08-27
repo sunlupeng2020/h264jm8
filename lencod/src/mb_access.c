@@ -145,6 +145,7 @@ void getNonAffNeighbour(unsigned int curr_mb_nr, int xN, int yN, int luma, Pixel
   else
     maxWH = 8;
 
+
   if ((xN<0)&&(yN<0))
   {
     pix->mb_addr   = currMb->mbAddrD;

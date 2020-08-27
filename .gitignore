@@ -26,12 +26,12 @@
 *.a
 *.lib
 
+
 # Executables
 *.exe
 *.out
 *.app
-*\bin\*.*
-
+bin/
 *.sln
 *.suo
 *.sdf
@@ -40,5 +40,7 @@
 *.vcproj
 *.user
 *.dsw
-*\Debug\*.*
+Debug/
 *.opensdf
+lencod/debug/
+ldecod/debug/

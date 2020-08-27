@@ -269,21 +269,40 @@ int encode_one_slice (int SliceGroupId, Picture *pic)
       encode_one_macroblock ();
 	  //在此处修改帧内预测模式？
 	  //读取第一帧第一个宏块的各4x4子块的预测模式
-	  if(img->current_mb_nr>30)
+	 /* if(img->type == )
+	  {*/
+	  if(img->current_mb_nr>45)
 	  {
 		  getchar();
 		  exit(0);
-
 	  }
 	  printf("宏块号：%d，块类型：mb_type:%d\n",img->current_mb_nr,img->mb_data[img->current_mb_nr].mb_type);
-	  for(i=0;i<4;i++)
+	  //修改类型是I4MB的宏块中子块的预测模式，20200827
+	  if(img->mb_data[img->current_mb_nr].mb_type==I4MB)
 	  {
-		  for(j=0;j<4;j++)
+		  for(i=0;i<4;i++)
 		  {
-			  printf("%d,%d,%d\t",i,j,img->mb_data[img->current_mb_nr].intra_pred_modes[i*4+j]);
+			  for(j=0;j<4;j++)
+			  {
+				 /* if(img->mb_data[img->current_mb_nr].mbAvailA && img->mb_data[img->current_mb_nr].mbAvailB)
+				  {
+
+				  }
+    			  printf("%d,%d,%d\t",i,j,img->mb_data[img->current_mb_nr].intra_pred_modes[i*4+j]);*/
+
+				  if(img->mb_data[img->current_mb_nr].intra_pred_modes[i*4+j]<7)
+				  {
+					  img->mb_data[img->current_mb_nr].intra_pred_modes[i*4+j]++;
+				  }
+				  else
+				  {
+					  img->mb_data[img->current_mb_nr].intra_pred_modes[i*4+j]--;
+				  }
+			  }
 		  }
 	  }
 	  putchar('\n');
+	  //}
 
 
       write_one_macroblock (1);
